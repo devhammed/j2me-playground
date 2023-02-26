@@ -9,9 +9,6 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
     private Command exitCommand;
 
     public HelloWorldApp() {
-        // Get display object for MIDlet
-        display = Display.getDisplay(this);
-
         // Create a new form
         mainScreen = new Form("Hello World App");
 
@@ -27,6 +24,11 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
     }
 
     public void startApp() throws MIDletStateChangeException {
+        // Get display for MIDlet
+        if (display == null) {
+            display = Display.getDisplay(this);
+        }
+
         // Set the current display to the screen
         display.setCurrent(mainScreen);
     }
