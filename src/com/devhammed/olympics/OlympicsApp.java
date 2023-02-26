@@ -3,24 +3,16 @@ package com.devhammed.olympics;
 import javax.microedition.lcdui.*;
 import javax.microedition.midlet.*;
 
-public class OlympicsApp extends MIDlet implements CommandListener {
+public class OlympicsApp extends MIDlet {
     private Display display;
-    private Command exitCommand;
     private OlympicsCanvas mainScreen;
 
     public OlympicsApp() {
         // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
-        // Create the Exit command
-        exitCommand = new Command("Exit", Command.EXIT, 2);
-
         // Create the main screen form
-        mainScreen = new OlympicsCanvas();
-
-        // Set the Exit command
-        mainScreen.addCommand(exitCommand);
-        mainScreen.setCommandListener(this);
+        mainScreen = new OlympicsCanvas(this);
     }
 
     public void startApp() throws MIDletStateChangeException {
@@ -32,12 +24,6 @@ public class OlympicsApp extends MIDlet implements CommandListener {
     }
 
     public void destroyApp(boolean unconditional) {
-    }
 
-    public void commandAction(Command c, Displayable s) {
-        if (c == exitCommand) {
-            destroyApp(false);
-            notifyDestroyed();
-        }
     }
 }
