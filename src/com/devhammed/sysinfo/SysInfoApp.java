@@ -10,6 +10,9 @@ public class SysInfoApp extends MIDlet implements CommandListener {
     private Command exitCommand;
 
     public SysInfoApp() {
+        // Get the Display object for the MIDlet
+        display = Display.getDisplay(this);
+
         // Create the Exit command
         exitCommand = new Command("Exit", Command.EXIT, 2);
 
@@ -44,11 +47,6 @@ public class SysInfoApp extends MIDlet implements CommandListener {
     }
 
     public void startApp() throws MIDletStateChangeException {
-        // Get display for MIDlet
-        if (display == null) {
-            display = Display.getDisplay(this);
-        }
-
         // Set the current display to the screen
         display.setCurrent(mainScreen);
     }

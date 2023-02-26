@@ -9,11 +9,14 @@ public class OlympicsApp extends MIDlet implements CommandListener {
     private OlympicsCanvas mainScreen;
 
     public OlympicsApp() {
-        // Create the main screen form
-        mainScreen = new OlympicsCanvas();
+        // Get the Display object for the MIDlet
+        display = Display.getDisplay(this);
 
         // Create the Exit command
         exitCommand = new Command("Exit", Command.EXIT, 2);
+
+        // Create the main screen form
+        mainScreen = new OlympicsCanvas();
 
         // Set the Exit command
         mainScreen.addCommand(exitCommand);
@@ -21,11 +24,6 @@ public class OlympicsApp extends MIDlet implements CommandListener {
     }
 
     public void startApp() throws MIDletStateChangeException {
-        // Get display for MIDlet
-        if (display == null) {
-            display = Display.getDisplay(this);
-        }
-
         // Set the current display to the screen
         display.setCurrent(mainScreen);
     }
