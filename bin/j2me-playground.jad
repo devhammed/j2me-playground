@@ -2,7 +2,7 @@ MIDlet-1: Hello World, , com.devhammed.helloworld.HelloWorldApp
 MIDlet-2: Sys Info, , com.devhammed.sysinfo.SysInfoApp
 MIDlet-3: Olympics, , com.devhammed.olympics.OlympicsApp
 MIDlet-Description: Playing with J2ME
-MIDlet-Jar-Size: 4761
+MIDlet-Jar-Size: 4760
 MIDlet-Jar-URL: j2me-playground.jar
 MIDlet-Name: J2ME Playground
 MIDlet-Vendor: Hammed Oyedele
