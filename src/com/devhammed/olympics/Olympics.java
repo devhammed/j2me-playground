@@ -3,10 +3,15 @@ package com.devhammed.olympics;
 import javax.microedition.lcdui.*;
 
 class OlympicsCanvas extends Canvas {
-    public void paint(Graphics g) {
-        // Set Screen Title
-        this.setTitle("Olympics App");
+    public OlympicsCanvas() {
+        // Setup super class
+        super();
 
+        // Set screen title
+        setTitle("Olympics App");
+    }
+
+    public void paint(Graphics g) {
         // Clear canvas
         g.setColor(255, 255, 255);
         g.fillRect(0, 0, getWidth(), getHeight());
