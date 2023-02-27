@@ -9,7 +9,7 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
     private Command exitCommand;
 
     public void startApp() throws MIDletStateChangeException {
-        // Get display object for MIDlet
+        // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
         // Build MIDlet UI

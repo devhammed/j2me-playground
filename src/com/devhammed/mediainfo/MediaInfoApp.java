@@ -12,7 +12,7 @@ public class MediaInfoApp
     private Command exitCommand;
 
     public void startApp() {
-        // Get display for MIDlet
+        // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
         // Build MIDlet UI
