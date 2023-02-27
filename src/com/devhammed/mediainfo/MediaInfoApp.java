@@ -11,7 +11,7 @@ public class MediaInfoApp
     private Form mainScreen;
     private Command exitCommand;
 
-    public void startApp() {
+    public void startApp() throws MIDletStateChangeException {
         // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
