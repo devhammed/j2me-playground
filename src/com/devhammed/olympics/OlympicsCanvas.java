@@ -12,8 +12,8 @@ class OlympicsCanvas extends Canvas {
         // Set application
         this.app = app;
 
-        // Set screen title
-        setTitle("Olympics App");
+        // Set full screen mode.
+        setFullScreenMode(true);
     }
 
     public void paint(Graphics g) {

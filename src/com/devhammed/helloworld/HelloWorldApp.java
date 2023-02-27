@@ -21,7 +21,7 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
             exitCommand = new Command("Exit", Command.EXIT, 2);
 
             // Add StringItem to form
-            mainScreen.append(new StringItem(null, "Hello, partner!"));
+            mainScreen.append(new StringItem("", "Hello, partner!"));
 
             // Set the Exit command
             mainScreen.addCommand(exitCommand);
