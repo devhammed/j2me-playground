@@ -15,12 +15,15 @@ public class MediaInfoApp
         // Get display for MIDlet
         display = Display.getDisplay(this);
 
-        // Build UI
+        // Build MIDlet UI
         if (mainScreen == null) {
+            // Create the main screen form
             mainScreen = new Form("Media Information App");
 
+            // Create the Exit command
             exitCommand = new Command("Exit", Command.EXIT, 0);
 
+            // Build up the supported content types as StringItem(s).
             String[] contentTypes = Manager.getSupportedContentTypes(null);
 
             for (int i = 0; i < contentTypes.length; i++) {
@@ -35,8 +38,10 @@ public class MediaInfoApp
                 }
             }
 
+            // Set the Exit command
             mainScreen.addCommand(exitCommand);
 
+            // Set MIDlet as command listener
             mainScreen.setCommandListener(this);
         }
 

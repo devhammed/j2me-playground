@@ -11,7 +11,7 @@ public class OlympicsApp extends MIDlet {
         // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
-        // Build UI if needed
+        // Build MIDlet UI
         if (mainScreen == null) {
             mainScreen = new OlympicsCanvas(this);
         }

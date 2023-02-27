@@ -13,7 +13,7 @@ public class SysInfoApp extends MIDlet implements CommandListener {
         // Get the Display object for the MIDlet
         display = Display.getDisplay(this);
 
-        // Build UI if needed
+        // Build MIDlet UI
         if (mainScreen == null) {
             // Create the main screen form
             mainScreen = new Form("System Info App");
@@ -45,6 +45,8 @@ public class SysInfoApp extends MIDlet implements CommandListener {
 
             // Set the Exit command
             mainScreen.addCommand(exitCommand);
+
+            // Set MIDlet as command listener
             mainScreen.setCommandListener(this);
         }
 

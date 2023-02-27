@@ -12,7 +12,7 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
         // Get display object for MIDlet
         display = Display.getDisplay(this);
 
-        // Build UI if needed
+        // Build MIDlet UI
         if (mainScreen == null) {
             // Create a new form
             mainScreen = new Form("Hello World App");
@@ -25,6 +25,8 @@ public class HelloWorldApp extends MIDlet implements CommandListener {
 
             // Set the Exit command
             mainScreen.addCommand(exitCommand);
+
+            // Set MIDlet as command listener
             mainScreen.setCommandListener(this);
         }
 
