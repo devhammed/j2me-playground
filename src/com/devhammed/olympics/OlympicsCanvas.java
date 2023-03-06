@@ -39,6 +39,10 @@ class OlympicsCanvas extends Canvas {
         g.setColor(0, 255, 0); // Green
         g.drawArc(50, 20, 25, 25, 0, 360);
 
+        // Draw action buttons bar
+        g.setColor(200, 200, 200);
+        g.fillRect(0, h - 20, w, 40);
+
         // Draw the "Exit" button text
         g.setColor(0, 0, 0);
         g.drawString("Exit", w - 2, h - 2, Graphics.BOTTOM | Graphics.RIGHT);
